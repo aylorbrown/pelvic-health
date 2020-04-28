@@ -1,0 +1,207 @@
+
+* {
+    box-sizing: border-box; 
+}
+
+@keyframes fly {
+
+	98.001%, 0% {
+                display: block;
+		transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+	}
+
+	15% {
+		transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+	}
+
+	15.001%, 18% {
+		transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+	}
+
+	40% {
+		transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+	}
+
+	40.001%, 43% {
+		transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+	}
+
+	65% {
+		transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+	}
+
+	65.001%, 68% {
+		transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+	}
+
+	95% {
+		transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+	}
+}
+
+@font-face {
+    font-family: "Suez One";
+    src: url(assets/fonts/SuezOne-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Savate Regular";
+    src: url(assets/fonts/savate-regular-webfont.woff2), url(assets/fonts/savate-regular-webfont.woff);
+}
+
+@font-face {
+    font-family: "Savate Italic";
+    src: url(assets/fonts/savate-italique-webfont.woff2), url(assets/fonts/savate-italique-webfont.woff);
+}
+
+
+body, html {
+    background-color: #fc715e;
+    background-attachment: fixed;
+}
+
+section.container {
+    display: flex;
+}
+
+.flier {
+	pointer-events: none;
+}
+
+.flier > * {
+    animation: fly 50s linear infinite;
+    pointer-events: none !important;
+	top: 0;
+	left: 0;
+	transform: translateX(-120%) translateY(-120%) rotateZ(0);
+	position: fixed;
+	animation-delay: 1s;
+	z-index: 999999;
+}
+
+.left-sticky {
+    background-color: #fc715e;
+    color: #1c1aa9;
+
+    width: 50%;
+    height: 100vh;
+    padding: 80px;
+
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.left-sticky h1 {
+    font-family: "Suez One";
+    font-size: 48px;
+    padding: 20px;
+}
+
+.left-sticky p {
+    font-family: "Savate Regular";
+    font-size: 24px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.left-sticky p.text {
+    line-height: 1.5;
+}
+
+.left-sticky .repo {
+    font-family: "Savate Regular";
+    font-size: 16px;
+    border: 1px solid #1c1aa9;
+    padding: 3px;
+    text-decoration: none;
+
+    position: absolute;
+    bottom: 10px;
+    left: 48px;  
+}
+
+.left-sticky .repo:hover, .left-sticky .author:hover {
+    font-family: "Savate Italic";
+    background-color: #1c1aa9;
+    color: white;
+
+    border: 1px solid white;
+}
+
+.left-sticky .author {
+    font-family: "Savate Regular";
+    font-size: 16px;
+    border: 1px solid #1c1aa9;
+    padding: 3px;
+    text-decoration: none;
+
+    position: absolute;
+    bottom: 10px;
+    right: 48px;
+}
+
+div.right-gifs{
+    background-color: #1c1aa9;
+    width: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    cursor: url("assets/downarrow.png"), auto;
+}
+
+div.square {
+    background-color: #fc715e;
+
+    width: 300px;
+    height: 520px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    cursor: url("assets/downarrow-blue.png"), auto;
+
+}
+
+
+
+div.right-gifs p {
+    width: 50%;
+    color: #fefffe;
+    font-size: 32px;
+}
+
+
+@media (max-width: 800px) {
+    body {
+        font-size: 16px;
+    }
+
+    section.container {
+        display: block;
+        flex-direction: column;
+    }
+
+    div.left-sticky {
+        position: absolute;
+    }
+
+    div.left-sticky, div.right-gifs {
+        width: 100%;
+        height: auto;
+    }
+
+    /* div.left-sticky p {
+        font-size: 22px;
+    } */
+
+
+}
