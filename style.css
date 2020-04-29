@@ -109,7 +109,6 @@ section.container {
 
     margin-top: 20px;
     margin-bottom: 20px;
-
 }
 
 .left-sticky p.text {
@@ -191,7 +190,7 @@ div.right-gifs p {
     }
 
     div.left-sticky {
-        position: absolute;
+        position: relative;
     }
 
     div.left-sticky, div.right-gifs {
@@ -199,9 +198,7 @@ div.right-gifs p {
         height: auto;
     }
 
-    /* div.left-sticky p {
+    div.left-sticky p {
         font-size: 22px;
-    } */
-
-
+    }
 }
