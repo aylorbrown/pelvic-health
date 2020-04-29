@@ -3,7 +3,7 @@
 ### Project Description 
 Landing page for an app I created call ROOT
 
-###  
+### Code Example
 
 Flying yogi is defined in html with the class ```.flier```
 
